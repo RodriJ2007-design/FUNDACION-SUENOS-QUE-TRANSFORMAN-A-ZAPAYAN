@@ -1,440 +1,689 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fundación Sueños que Transforman a Zapayán</title>
+<title>Fundación Sueños que Transforman a Zapayán</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #050505;
-            color: white;
-        }
+html{
+  scroll-behavior:smooth;
+}
 
-        header {
-            background: #050505;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #d9a900;
-        }
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#050505;
+  color:#fff;
+  line-height:1.6;
+}
 
-        .logo {
-            width: 170px;
-            max-width: 60%;
-            margin-bottom: 15px;
-        }
+header{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 20px;
+  background:
+    linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.9)),
+    radial-gradient(circle at center,#173b24 0,#050505 65%);
+}
 
-        .academy {
-            color: #e0ae00;
-            font-size: 17px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
+.hero{
+  max-width:900px;
+}
 
-        h1 {
-            font-size: 30px;
-            margin-top: 8px;
-            line-height: 1.1;
-        }
+.logo{
+  font-size:70px;
+  margin-bottom:15px;
+}
 
-        .hero {
-            min-height: 620px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 50px 25px;
-            background:
-                linear-gradient(
-                    rgba(0,0,0,0.78),
-                    rgba(0,0,0,0.92)
-                );
-        }
+h1{
+  font-size:clamp(38px,8vw,72px);
+  line-height:1.05;
+  margin-bottom:20px;
+  color:#f4c542;
+}
 
-        .hero-content {
-            max-width: 800px;
-        }
+.hero p{
+  font-size:clamp(18px,4vw,25px);
+  color:#eee;
+  margin-bottom:30px;
+}
 
-        .hero h2 {
-            color: #e0ae00;
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
+.btn{
+  display:inline-block;
+  padding:15px 25px;
+  margin:6px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#000;
+  background:#f4c542;
+  transition:.2s;
+}
 
-        .hero p {
-            font-size: 19px;
-            line-height: 1.6;
-            color: #dddddd;
-            margin-bottom: 30px;
-        }
+.btn:hover{
+  transform:translateY(-2px);
+}
 
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+.btn.secondary{
+  background:#fff;
+}
 
-        .button {
-            display: inline-block;
-            padding: 15px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(5,5,5,.96);
+  border-bottom:1px solid #333;
+  padding:12px;
+  text-align:center;
+}
 
-        .primary {
-            background: #e0ae00;
-            color: #000;
-        }
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:14px;
+  font-weight:bold;
+}
 
-        .secondary {
-            border: 2px solid #e0ae00;
-            color: #e0ae00;
-        }
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 20px;
+}
 
-        .button:hover {
-            transform: scale(1.04);
-        }
+.section-title{
+  text-align:center;
+  font-size:38px;
+  margin-bottom:15px;
+  color:#f4c542;
+}
 
-        section {
-            padding: 60px 25px;
-            max-width: 1100px;
-            margin: auto;
-        }
+.section-intro{
+  text-align:center;
+  max-width:750px;
+  margin:0 auto 40px;
+  color:#ccc;
+  font-size:18px;
+}
 
-        .section-title {
-            text-align: center;
-            color: #e0ae00;
-            font-size: 32px;
-            margin-bottom: 35px;
-        }
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
 
-        .about {
-            background: #101010;
-        }
+.card{
+  background:#111;
+  border:1px solid #292929;
+  border-radius:18px;
+  padding:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
+.card h3{
+  color:#f4c542;
+  margin-bottom:10px;
+}
 
-        .card {
-            background: #171717;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #333;
-        }
+.icon{
+  font-size:42px;
+  margin-bottom:10px;
+}
 
-        .card h3 {
-            color: #e0ae00;
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
+.dark-section{
+  background:#090909;
+  max-width:none;
+}
 
-        .card p {
-            color: #cccccc;
-            line-height: 1.7;
-        }
+.dark-section > *{
+  max-width:1100px;
+  margin-left:auto;
+  margin-right:auto;
+}
 
-        .academy-section {
-            text-align: center;
-        }
+.list{
+  list-style:none;
+}
 
-        .academy-section p {
-            color: #ccc;
-            font-size: 18px;
-            line-height: 1.7;
-            max-width: 800px;
-            margin: auto;
-        }
+.list li{
+  padding:12px 0;
+  border-bottom:1px solid #292929;
+}
 
-        .projects {
-            background: #0c0c0c;
-        }
+.list li::before{
+  content:"⚽ ";
+}
 
-        .project-card {
-            text-align: center;
-        }
+.news{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
 
-        .project-icon {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
+.news article{
+  background:#111;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid #292929;
+}
 
-        footer {
-            background: #000;
-            border-top: 2px solid #e0ae00;
-            text-align: center;
-            padding: 35px 20px;
-        }
+.news .photo{
+  height:150px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:55px;
+  background:linear-gradient(135deg,#173b24,#111);
+}
 
-        footer h3 {
-            color: #e0ae00;
-            margin-bottom: 10px;
-        }
+.news-content{
+  padding:20px;
+}
 
-        footer p {
-            color: #aaa;
-            margin: 7px;
-        }
+.form-box{
+  max-width:700px;
+  margin:auto;
+  background:#111;
+  padding:25px;
+  border-radius:20px;
+  border:1px solid #292929;
+}
 
-        .copyright {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #666;
-        }
+.form-group{
+  margin-bottom:16px;
+}
 
-        @media (max-width: 600px) {
+label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:bold;
+}
 
-            .hero h2 {
-                font-size: 31px;
-            }
+input,
+select,
+textarea{
+  width:100%;
+  padding:13px;
+  border-radius:10px;
+  border:1px solid #444;
+  background:#050505;
+  color:#fff;
+  font-size:16px;
+}
 
-            .hero p {
-                font-size: 16px;
-            }
+textarea{
+  min-height:110px;
+  resize:vertical;
+}
 
-            h1 {
-                font-size: 24px;
-            }
+button{
+  width:100%;
+  padding:15px;
+  border:0;
+  border-radius:30px;
+  background:#f4c542;
+  color:#000;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-            .section-title {
-                font-size: 27px;
-            }
-        }
-    </style>
+.notice{
+  background:#182518;
+  border-left:4px solid #f4c542;
+  padding:15px;
+  border-radius:8px;
+  margin-bottom:20px;
+  color:#ddd;
+}
+
+.category{
+  margin-bottom:25px;
+}
+
+.category h3{
+  color:#f4c542;
+  margin-bottom:8px;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+}
+
+.gallery div{
+  min-height:160px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#173b24,#222);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:45px;
+}
+
+.contact{
+  text-align:center;
+}
+
+footer{
+  text-align:center;
+  padding:35px 20px;
+  background:#000;
+  border-top:1px solid #222;
+  color:#aaa;
+}
+
+@media(max-width:600px){
+  nav{
+    overflow-x:auto;
+    white-space:nowrap;
+    text-align:left;
+  }
+
+  section{
+    padding:60px 18px;
+  }
+
+  h1{
+    font-size:42px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<header>
+<header id="inicio">
+  <div class="hero">
+    <div class="logo">⚽</div>
 
-    <!-- LOGO DE LA ACADEMIA -->
-    <div class="logo">
-        ⚽
-    </div>
-
-    <div class="academy">
-        ACADEMIA ZAPAYÁN F.C.
-    </div>
-
-    <h1>
-        FUNDACIÓN SUEÑOS QUE TRANSFORMAN A ZAPAYÁN
-    </h1>
-
-</header>
-
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <h2>
-            Formando Talentos,<br>
-            Construyendo Futuro
-        </h2>
-
-        <p>
-            Una iniciativa dedicada a transformar vidas a través del
-            deporte, la formación y las oportunidades para nuestros
-            niños, niñas y jóvenes.
-        </p>
-
-        <div class="buttons">
-
-            <a href="#inscripciones" class="button primary">
-                INSCRIBIR A MI HIJO
-            </a>
-
-            <a href="#fundacion" class="button secondary">
-                CONOCER LA FUNDACIÓN
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="fundacion" class="about">
-
-    <h2 class="section-title">
-        Nuestra Fundación
-    </h2>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <h3>🎯 Nuestra Misión</h3>
-
-            <p>
-                Formar integralmente a niños, niñas y jóvenes de Zapayán
-                a través del deporte, especialmente el fútbol, promoviendo
-                el desarrollo de sus capacidades deportivas, valores humanos,
-                disciplina, respeto, trabajo en equipo y compromiso.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>🌎 Nuestra Visión</h3>
-
-            <p>
-                Ser una fundación y academia deportiva reconocida en Zapayán
-                y el departamento del Magdalena por su compromiso con la
-                formación integral de niños, niñas y jóvenes, consolidando
-                procesos deportivos de calidad y generando oportunidades
-                para descubrir y potenciar nuevos talentos.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>⭐ Nuestros Valores</h3>
-
-            <p>
-                Disciplina, respeto, responsabilidad, trabajo en equipo,
-                perseverancia, solidaridad, compromiso y amor por el deporte.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="academy-section">
-
-    <h2 class="section-title">
-        Academia Zapayán F.C.
-    </h2>
+    <h1>Fundación Sueños que Transforman a Zapayán</h1>
 
     <p>
-        Nuestra escuela de formación deportiva busca desarrollar el talento
-        futbolístico de nuestros niños y jóvenes, mientras fortalecemos sus
-        valores y habilidades para la vida.
+      Transformamos sueños en oportunidades a través del deporte,
+      la formación y el acompañamiento de nuestros niños y jóvenes.
     </p>
 
-</section>
+    <a href="#academia" class="btn">Conoce la Academia</a>
+    <a href="#inscripciones" class="btn secondary">Inscribir a mi hijo</a>
+  </div>
+</header>
 
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#mision">Misión</a>
+  <a href="#fundacion">Fundación</a>
+  <a href="#academia">Academia</a>
+  <a href="#inscripciones">Inscripciones</a>
+  <a href="#noticias">Noticias</a>
+  <a href="#galeria">Galería</a>
+  <a href="#contacto">Contacto</a>
+</nav>
 
-<section class="projects">
+<section id="mision">
 
-    <h2 class="section-title">
-        Nuestros Proyectos
-    </h2>
+  <h2 class="section-title">Misión y visión</h2>
 
-    <div class="cards">
+  <p class="section-intro">
+    Construir oportunidades para niños y jóvenes mediante el deporte,
+    la educación, los valores y el trabajo comunitario.
+  </p>
 
-        <div class="card project-card">
+  <div class="cards">
 
-            <div class="project-icon">⚽</div>
-
-            <h3>Escuela de Formación</h3>
-
-            <p>
-                Procesos de formación deportiva para niños y jóvenes.
-            </p>
-
-        </div>
-
-
-        <div class="card project-card">
-
-            <div class="project-icon">🏆</div>
-
-            <h3>Competencias</h3>
-
-            <p>
-                Participación en torneos y competencias deportivas.
-            </p>
-
-        </div>
-
-
-        <div class="card project-card">
-
-            <div class="project-icon">🤝</div>
-
-            <h3>Proyección Social</h3>
-
-            <p>
-                Proyectos que utilizan el deporte como herramienta
-                de transformación social.
-            </p>
-
-        </div>
-
+    <div class="card">
+      <div class="icon">🎯</div>
+      <h3>Nuestra misión</h3>
+      <p>
+        Promover la formación integral de niños y jóvenes de Zapayán
+        mediante el fútbol, la disciplina, el compañerismo y los valores.
+      </p>
     </div>
 
+    <div class="card">
+      <div class="icon">🌟</div>
+      <h3>Nuestra visión</h3>
+      <p>
+        Ser una organización reconocida por generar oportunidades,
+        descubrir talentos y transformar positivamente nuestra comunidad.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">❤️</div>
+      <h3>Nuestros valores</h3>
+      <p>
+        Respeto, disciplina, solidaridad, responsabilidad, trabajo en
+        equipo y compromiso.
+      </p>
+    </div>
+
+  </div>
+
 </section>
 
+<section id="fundacion" class="dark-section">
 
-<section id="inscripciones">
+  <h2 class="section-title">La Fundación</h2>
 
-    <h2 class="section-title">
-        Inscripciones
-    </h2>
+  <p class="section-intro">
+    Creemos que el deporte puede abrir puertas y construir un mejor futuro.
+  </p>
 
-    <div class="card" style="text-align:center;">
+  <div class="cards">
 
-        <h3>
-            ¿Quieres formar parte de nuestra Academia?
-        </h3>
+    <div class="card">
+      <div class="icon">⚽</div>
+      <h3>Deporte</h3>
+      <p>
+        Utilizamos el fútbol como herramienta de formación y desarrollo.
+      </p>
+    </div>
 
+    <div class="card">
+      <div class="icon">📚</div>
+      <h3>Formación</h3>
+      <p>
+        Buscamos fortalecer hábitos, disciplina y responsabilidad.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>Comunidad</h3>
+      <p>
+        Trabajamos para crear espacios positivos para las familias.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="academia">
+
+  <h2 class="section-title">Academia Zapayán F.C.</h2>
+
+  <p class="section-intro">
+    Formación deportiva para niños y jóvenes, con procesos organizados
+    por categorías.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">🏆</div>
+      <h3>Categorías</h3>
+
+      <div class="category">
+        <h3>Categoría 2014</h3>
+        <ul class="list">
+          <li>Formación técnica</li>
+          <li>Entrenamiento</li>
+          <li>Competencia</li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h3>Categoría 2015</h3>
+        <ul class="list">
+          <li>Formación técnica</li>
+          <li>Entrenamiento</li>
+          <li>Competencia</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏃</div>
+      <h3>Formación deportiva</h3>
+
+      <ul class="list">
+        <li>Entrenamientos</li>
+        <li>Metodología</li>
+        <li>Trabajo en equipo</li>
+        <li>Preparación física</li>
+        <li>Competencias</li>
+        <li>Proyección de talentos</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌱</div>
+      <h3>Desarrollo integral</h3>
+
+      <p>
+        Buscamos que cada jugador crezca no solamente como deportista,
+        sino también como persona.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="inscripciones" class="dark-section">
+
+  <h2 class="section-title">Inscripciones</h2>
+
+  <p class="section-intro">
+    Da el primer paso para formar parte de la Academia Zapayán F.C.
+  </p>
+
+  <div class="form-box">
+
+    <div class="notice">
+      <strong>Importante:</strong>
+      completa la información con autorización del acudiente.
+      Los datos de menores deben manejarse de forma privada y segura.
+    </div>
+
+    <form id="registroForm">
+
+      <div class="form-group">
+        <label for="nombre">Nombre del niño</label>
+        <input id="nombre" type="text" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fecha">Fecha de nacimiento</label>
+        <input id="fecha" type="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="edad">Edad</label>
+        <input id="edad" type="number" min="3" max="18" required>
+      </div>
+
+      <div class="form-group">
+        <label for="documento">Documento</label>
+        <input id="documento" type="text">
+      </div>
+
+      <div class="form-group">
+        <label for="acudiente">Nombre del acudiente</label>
+        <input id="acudiente" type="text" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" type="tel" required>
+      </div>
+
+      <div class="form-group">
+        <label for="direccion">Dirección</label>
+        <input id="direccion" type="text">
+      </div>
+
+      <div class="form-group">
+        <label for="categoria">Categoría</label>
+
+        <select id="categoria" required>
+          <option value="">Seleccionar categoría</option>
+          <option>Categoría 2014</option>
+          <option>Categoría 2015</option>
+          <option>Otra categoría</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="info">Información adicional</label>
+        <textarea id="info"></textarea>
+      </div>
+
+      <button type="submit">
+        ENVIAR SOLICITUD DE INSCRIPCIÓN
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<section id="noticias">
+
+  <h2 class="section-title">Noticias y proyectos</h2>
+
+  <p class="section-intro">
+    Conoce las actividades, proyectos y momentos importantes de nuestra comunidad.
+  </p>
+
+  <div class="news">
+
+    <article>
+      <div class="photo">🏆</div>
+      <div class="news-content">
+        <h3>Participamos en torneo</h3>
         <p>
-            Próximamente podrás realizar la inscripción de tu hijo
-            directamente desde nuestra plataforma.
+          Seguimos llevando el nombre de Zapayán a nuevos escenarios deportivos.
         </p>
+      </div>
+    </article>
 
-        <br>
+    <article>
+      <div class="photo">⚽</div>
+      <div class="news-content">
+        <h3>Jornada de entrenamiento</h3>
+        <p>
+          Una nueva jornada de aprendizaje, disciplina y compañerismo.
+        </p>
+      </div>
+    </article>
 
-        <a href="#" class="button primary">
-            PRÓXIMAMENTE
-        </a>
+    <article>
+      <div class="photo">🤝</div>
+      <div class="news-content">
+        <h3>Nuevos aliados</h3>
+        <p>
+          Seguimos construyendo alianzas para fortalecer nuestros proyectos.
+        </p>
+      </div>
+    </article>
 
-    </div>
+    <article>
+      <div class="photo">❤️</div>
+      <div class="news-content">
+        <h3>Actividad social</h3>
+        <p>
+          Deporte y comunidad unidos para generar nuevas oportunidades.
+        </p>
+      </div>
+    </article>
+
+  </div>
 
 </section>
 
+<section id="galeria" class="dark-section">
+
+  <h2 class="section-title">Galería</h2>
+
+  <p class="section-intro">
+    Próximamente podremos mostrar aquí fotografías de entrenamientos,
+    partidos, torneos y actividades de la Fundación.
+  </p>
+
+  <div class="gallery">
+
+    <div>⚽</div>
+    <div>🏆</div>
+    <div>📸</div>
+    <div>🥅</div>
+    <div>👟</div>
+    <div>❤️</div>
+
+  </div>
+
+</section>
+
+<section id="contacto">
+
+  <h2 class="section-title">Contacto</h2>
+
+  <div class="contact">
+
+    <p>
+      ¿Quieres conocer más sobre la Fundación Sueños que Transforman a Zapayán?
+    </p>
+
+    <br>
+
+    <p>
+      📍 Zapayán, Magdalena, Colombia
+    </p>
+
+    <p>
+      ⚽ Academia Zapayán F.C.
+    </p>
+
+    <br>
+
+    <a class="btn" href="#inscripciones">
+      Inscribir a mi hijo
+    </a>
+
+  </div>
+
+</section>
 
 <footer>
 
-    <h3>
-        FUNDACIÓN SUEÑOS QUE TRANSFORMAN A ZAPAYÁN
-    </h3>
+  <p>
+    © 2026 Fundación Sueños que Transforman a Zapayán
+  </p>
 
-    <p>
-        Academia Zapayán F.C.
-    </p>
-
-    <p>
-        “Formando Talentos, Construyendo Futuro”
-    </p>
-
-    <div class="copyright">
-        © 2026 Fundación Sueños que Transforman a Zapayán
-    </div>
+  <p>
+    Academia Zapayán F.C. ⚽
+  </p>
 
 </footer>
+
+<script>
+document.getElementById("registroForm").addEventListener("submit", function(event){
+
+  event.preventDefault();
+
+  alert(
+    "Solicitud preparada correctamente. " +
+    "En la siguiente etapa conectaremos este formulario con un sistema privado " +
+    "para administrar las inscripciones."
+  );
+
+});
+</script>
 
 </body>
 </html>
