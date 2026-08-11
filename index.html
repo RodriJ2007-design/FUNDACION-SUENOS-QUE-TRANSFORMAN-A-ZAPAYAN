@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fundación Sueños que Transforman a Zapayán</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050505;
+            color: white;
+        }
+
+        header {
+            background: #050505;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #d9a900;
+        }
+
+        .logo {
+            width: 170px;
+            max-width: 60%;
+            margin-bottom: 15px;
+        }
+
+        .academy {
+            color: #e0ae00;
+            font-size: 17px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-top: 8px;
+            line-height: 1.1;
+        }
+
+        .hero {
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 25px;
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.78),
+                    rgba(0,0,0,0.92)
+                );
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h2 {
+            color: #e0ae00;
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.6;
+            color: #dddddd;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #e0ae00;
+            color: #000;
+        }
+
+        .secondary {
+            border: 2px solid #e0ae00;
+            color: #e0ae00;
+        }
+
+        .button:hover {
+            transform: scale(1.04);
+        }
+
+        section {
+            padding: 60px 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #e0ae00;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            background: #101010;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #171717;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+
+        .card h3 {
+            color: #e0ae00;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #cccccc;
+            line-height: 1.7;
+        }
+
+        .academy-section {
+            text-align: center;
+        }
+
+        .academy-section p {
+            color: #ccc;
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .projects {
+            background: #0c0c0c;
+        }
+
+        .project-card {
+            text-align: center;
+        }
+
+        .project-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #000;
+            border-top: 2px solid #e0ae00;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer h3 {
+            color: #e0ae00;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #aaa;
+            margin: 7px;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+
+            .hero h2 {
+                font-size: 31px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <!-- LOGO DE LA ACADEMIA -->
+    <div class="logo">
+        ⚽
+    </div>
+
+    <div class="academy">
+        ACADEMIA ZAPAYÁN F.C.
+    </div>
+
+    <h1>
+        FUNDACIÓN SUEÑOS QUE TRANSFORMAN A ZAPAYÁN
+    </h1>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h2>
+            Formando Talentos,<br>
+            Construyendo Futuro
+        </h2>
+
+        <p>
+            Una iniciativa dedicada a transformar vidas a través del
+            deporte, la formación y las oportunidades para nuestros
+            niños, niñas y jóvenes.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#inscripciones" class="button primary">
+                INSCRIBIR A MI HIJO
+            </a>
+
+            <a href="#fundacion" class="button secondary">
+                CONOCER LA FUNDACIÓN
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="fundacion" class="about">
+
+    <h2 class="section-title">
+        Nuestra Fundación
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🎯 Nuestra Misión</h3>
+
+            <p>
+                Formar integralmente a niños, niñas y jóvenes de Zapayán
+                a través del deporte, especialmente el fútbol, promoviendo
+                el desarrollo de sus capacidades deportivas, valores humanos,
+                disciplina, respeto, trabajo en equipo y compromiso.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🌎 Nuestra Visión</h3>
+
+            <p>
+                Ser una fundación y academia deportiva reconocida en Zapayán
+                y el departamento del Magdalena por su compromiso con la
+                formación integral de niños, niñas y jóvenes, consolidando
+                procesos deportivos de calidad y generando oportunidades
+                para descubrir y potenciar nuevos talentos.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>⭐ Nuestros Valores</h3>
+
+            <p>
+                Disciplina, respeto, responsabilidad, trabajo en equipo,
+                perseverancia, solidaridad, compromiso y amor por el deporte.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="academy-section">
+
+    <h2 class="section-title">
+        Academia Zapayán F.C.
+    </h2>
+
+    <p>
+        Nuestra escuela de formación deportiva busca desarrollar el talento
+        futbolístico de nuestros niños y jóvenes, mientras fortalecemos sus
+        valores y habilidades para la vida.
+    </p>
+
+</section>
+
+
+<section class="projects">
+
+    <h2 class="section-title">
+        Nuestros Proyectos
+    </h2>
+
+    <div class="cards">
+
+        <div class="card project-card">
+
+            <div class="project-icon">⚽</div>
+
+            <h3>Escuela de Formación</h3>
+
+            <p>
+                Procesos de formación deportiva para niños y jóvenes.
+            </p>
+
+        </div>
+
+
+        <div class="card project-card">
+
+            <div class="project-icon">🏆</div>
+
+            <h3>Competencias</h3>
+
+            <p>
+                Participación en torneos y competencias deportivas.
+            </p>
+
+        </div>
+
+
+        <div class="card project-card">
+
+            <div class="project-icon">🤝</div>
+
+            <h3>Proyección Social</h3>
+
+            <p>
+                Proyectos que utilizan el deporte como herramienta
+                de transformación social.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="inscripciones">
+
+    <h2 class="section-title">
+        Inscripciones
+    </h2>
+
+    <div class="card" style="text-align:center;">
+
+        <h3>
+            ¿Quieres formar parte de nuestra Academia?
+        </h3>
+
+        <p>
+            Próximamente podrás realizar la inscripción de tu hijo
+            directamente desde nuestra plataforma.
+        </p>
+
+        <br>
+
+        <a href="#" class="button primary">
+            PRÓXIMAMENTE
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h3>
+        FUNDACIÓN SUEÑOS QUE TRANSFORMAN A ZAPAYÁN
+    </h3>
+
+    <p>
+        Academia Zapayán F.C.
+    </p>
+
+    <p>
+        “Formando Talentos, Construyendo Futuro”
+    </p>
+
+    <div class="copyright">
+        © 2026 Fundación Sueños que Transforman a Zapayán
+    </div>
+
+</footer>
+
+</body>
+</html>
